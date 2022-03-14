@@ -16,13 +16,13 @@ def f():
     Can be used to identify possible areas to re-write as c/c++ extensions
     """
     import numpy as np
-    from example_proj import array_sum
+    from cython_example_proj import array_sum
 
     def array_sum2(A):
         m, n = A.shape
         result = 0
-        for i in xrange(n):
-            for j in xrange(n):
+        for i in range(n):
+            for j in range(n):
                 result += A[i, j]
     A = np.random.randn(5000, 5000)
     array_sum(A)
